@@ -1,5 +1,7 @@
-## Make sure you have the following files in your working directory:
-## ("activity_labels.txt","features.txt","subject_test.txt","subject_train.txt","X_test.txt","X_train.txt","y_test.txt","y_train.txt")        
+## Folders in the cuurent repository:
+A] Files: this folder contain the main two required files; aggregated.csv as a final datatset and run_analysis.R script file used to prepare the aggregated.csv file
+B] Test: this folder contains the input files and the run_analysis.R. Running run_analysis.R on the input files outputs aggregated.csv file.
+
 
 ## 1- Merges the training and the test sets to create one data set.
 
@@ -99,9 +101,11 @@
 
 > aggregated <- aggregate(extracted[,4:82], list(interaction=extracted$interaction), mean)
 
-## The final dataframe, aggregated, has 180 observations corresponding to 6 activity positions of
-## 30 subjects and the mean of 80 variables or features.
+## The final dataframe, aggregated, has 180 observations corresponding to 6 activity positions of 30 subjects and the mean of 80 variables or features. This dataframe can be written into a .csv file
 
-## In order to test the run_analysis.R script, please use the test directory of the current repo.
+> write.csv (aggregated, file = "aggregated.csv")
+
+## In order to test the run_analysis.R script, please use the test directory of the current repo.Make sure you have the following files in your working directory: ("activity_labels.txt","features.txt","subject_test.txt","subject_train.txt","X_test.txt","X_train.txt","y_test.txt","y_train.txt")        
+
 
 
