@@ -10,15 +10,21 @@ B] Test: this folder contains the input files and the run_analysis.R. Running ru
 ## file into to a dataframe
 
 > subject_test <- read.table ("subject_test.txt")
+
 > y_test <- read.table ("y_test.txt")
+
 > X_test <- read.table ("X_test.txt")
+
 > test <-  cbind(subject_test, y_test, X_test)
 
 ## test is a dataframe of the test set
 
 > subject_train<- read.table ("subject_train.txt")
+
 > y_train <- read.table ("y_train.txt")
+
 > X_train <- read.table ("X_train.txt")
+
 > train <-  cbind(subject_train, y_train, X_train) 
 
 ## train is a dataframe of the train set
@@ -40,6 +46,7 @@ B] Test: this folder contains the input files and the run_analysis.R. Running ru
 ## Assign the features using the features.txt as follow:
 
 > features <- read.table("features.txt")
+
 > features_names <- (features[,2]) 
 
 ## features_names is a factor, we need a character vector
@@ -71,10 +78,15 @@ B] Test: this folder contains the input files and the run_analysis.R. Running ru
 ## Replace the values in the activity label column if extracted dataframe using the following:
 
 > extracted$activitylabel[extracted$activitylabel %in% "1"] <- "WALKING"
+
 > extracted$activitylabel[extracted$activitylabel %in% "2"] <- "WALKING_UPSTAIRS"
+
 > extracted$activitylabel[extracted$activitylabel %in% "3"] <- "WALKING_DOWNSTAIRS"
+
 > extracted$activitylabel[extracted$activitylabel %in% "4"] <- "SITTING"
+
 > extracted$activitylabel[extracted$activitylabel %in% "5"] <- "STANDING"
+
 > extracted$activitylabel[extracted$activitylabel %in% "6"] <- "LAYING"
 
 ## 5- Creates a second, independent tidy data set with the average of each variable for each activity and each subject.  
