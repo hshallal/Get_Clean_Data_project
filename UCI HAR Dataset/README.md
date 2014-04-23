@@ -102,4 +102,6 @@
 ## The final dataframe, aggregated, has 180 observations corresponding to 6 activity positions of
 ## 30 subjects and the mean of 80 variables or features.
 
+## In order to test the run_analysis.R script, please use the test directory of the current repo.
+
 
