@@ -71,13 +71,12 @@ extracted$activitylabel <- as.factor(extracted$activitylabel) ## factor with 6 l
 interaction <- interaction(extracted$subject, extracted$activitylabel)
 
 ## Add the interaction vector as a column to the dataframe extracted
-
 extracted <- cbind(interaction, extracted)
 
 ## Calculate the mean of each variable using aggregation by the interaction column
 aggregated <- aggregate(extracted[,4:82], list(interaction=extracted$interaction), mean)
 
-## The final dataframe, aggregated, has 180 observations corresponding to 6 activity positions of 30 subjects and the mean of 80 variables or features. 
+## The final dataframe, aggregated, has 180 observations corresponding to 6 activity positions of 30 subjects and the mean of 80 variables or features.
 
 write.csv (aggregated, file = "aggregated.csv")
 
